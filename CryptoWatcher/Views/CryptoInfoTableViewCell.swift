@@ -91,14 +91,12 @@ final class CryptoInfoTableViewCell: UITableViewCell {
     }
     
     private func addNameCoinLabelSetups() {
-        nameCoinLabel.text = "Bitcoin"
         nameCoinLabel.textAlignment = .left
         nameCoinLabel.textColor = .white
         nameCoinLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
     }
     
     private func addScaleCoinLabelSetups() {
-        scaleCoinLabel.text = "$463332"
         scaleCoinLabel.textAlignment = .right
         scaleCoinLabel.textColor = UIColor(red: 175/255, green: 173/255, blue: 185/255, alpha: 1.0)
         scaleCoinLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
