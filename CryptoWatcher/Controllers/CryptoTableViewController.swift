@@ -2,7 +2,7 @@ import UIKit
 
 final class CryptoTableViewController: UITableViewController {
     // MARK: - Properties
-    
+
     // MARK: Private
 
     private var coins: [CoinClientModel] = [] {
@@ -18,7 +18,7 @@ final class CryptoTableViewController: UITableViewController {
         addSetups()
         fetchDataCoins()
     }
-    
+
     // MARK: - API
 
     private func fetchDataCoins() {
