@@ -10,7 +10,7 @@ final class CryptoInfoTableViewCell: UITableViewCell {
     // MARK: Private
     
     private let mainStackView: UIStackView = .init()
-    let cryptoView: UIView = .init()
+    private let cryptoView: UIView = .init()
     private let nameCoinLabel: UILabel = .init()
     private let scaleCoinLabel: UILabel = .init()
 

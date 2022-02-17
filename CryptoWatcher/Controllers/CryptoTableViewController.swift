@@ -2,6 +2,8 @@ import UIKit
 
 final class CryptoTableViewController: UITableViewController {
     // MARK: - Properties
+    
+    // MARK: Private
 
     private var coins: [CoinClientModel] = [] {
         didSet {
@@ -9,17 +11,17 @@ final class CryptoTableViewController: UITableViewController {
         }
     }
 
-    // MARK: Private
-
     // MARK: - LIfecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addSetups()
-        fetchDataCurrencyByUsd()
+        fetchDataCoins()
     }
+    
+    // MARK: - API
 
-    private func fetchDataCurrencyByUsd() {
+    private func fetchDataCoins() {
         APIManager.instance.getAllExnchanges(completion: { coins in
             self.coins = coins
         })
@@ -56,12 +58,12 @@ final class CryptoTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        85
+        return 85
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: CryptoInfoTableViewCell.identifier, for: indexPath) as? CryptoInfoTableViewCell {
-            cell.set(coins[indexPath.row].assetId!, String(format: "%.3f", coins[indexPath.row].priceUsd ?? ""))
+            cell.set(coins[indexPath.row].assetId ?? "None", String(format: "%.3f", coins[indexPath.row].priceUsd ?? "0"))
             return cell
         }
         return UITableViewCell()

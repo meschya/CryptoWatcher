@@ -12,7 +12,7 @@ final class APIManager {
         static let assets = "/assets"
     }
     
-    let header: HTTPHeaders = ["X-CoinAPI-Key": "88ADD170-B775-464D-8769-3D6A9F998326", "Accept": "application/json"]
+    private let header: HTTPHeaders = ["X-CoinAPI-Key": "88ADD170-B775-464D-8769-3D6A9F998326", "Accept": "application/json"]
     
     func getAllExnchanges(completion: @escaping (([CoinClientModel]) -> Void)) {
         AF.request(Constants.baseURL + EndPoints.assets, method: .get, parameters: [:], headers: header).responseDecodable(of: [CoinServerModel].self) { response in
