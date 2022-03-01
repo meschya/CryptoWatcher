@@ -1,3 +1,13 @@
 # CryptoWatcher
 Monitoring application created to track cryptocurrency rates
-![alt text](https://static.tildacdn.com/tild6538-3832-4663-b062-363735626633/__2022-02-19__165027.png)
+## Installation
+
+### CocoaPods
+
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate my CocoaPods into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+pod 'Alamofire', '~> 5.5'
+```
+
+![alt text](https://static.tildacdn.com/tild3630-6561-4935-b737-626438633061/__2022-03-01__133732.png)
