@@ -1,5 +1,17 @@
 # CryptoWatcher
 Monitoring application created to track cryptocurrency rates
+## Technology
+
+```ruby
+UIKit
+```
+```ruby
+Alamofire
+```
+```ruby
+Cocoapods
+```
+
 ## Installation
 
 ### CocoaPods
